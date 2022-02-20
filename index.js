@@ -33,7 +33,7 @@ app.post('/submit-data', function (req, res) {
     if (err) throw err;
         //res.sendFile('sucessfullylogin.html', { root:__dirname });
       //window.location = "https://takacastoff-3.herokuapp.com/";
-      const res = await axios.get('https://takacastoff-3.herokuapp.com/');
+      res = await axios.get('https://takacastoff-3.herokuapp.com/');
     });
 
 });
