@@ -35,8 +35,8 @@ app.post('/submit-data', function (req, res) {
       //var custID = result.custID;
       //req.setAttribute("SES_ID",custID);
       var custid = JSON.stringify(result);
-      const myObj = JSON.parse(custid);
-      var id = myObj["custID"];
+      //const myObj = JSON.parse(custid);
+      var id = custid["custID"];
       //var data = custid;
       //var s = data[0].custID + "";
       //var d = parseInt(s);
