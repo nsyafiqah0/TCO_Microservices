@@ -75,5 +75,4 @@ app.post('/view', function (req, res) {
 //var server = app.listen(8085, function () {
    // console.log('Node server is running..');
 //});
-var port_number = server.listen(process.env.PORT || 3000);
-app.listen(port_number);
+let port = process.env.PORT || 8080; along with app.listen(port);
