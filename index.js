@@ -34,7 +34,7 @@ app.post('/submit-data', function (req, res) {
       //var custid = result;
       //var custID = result.custID;
       //req.setAttribute("SES_ID",custID);
-      const myJSON = JSON.stringify(result);                 
+      var myJSON = JSON.stringify(result);                 
       res.redirect('https://takacastoff-3.herokuapp.com/Homepage.jsp?custID='+myJSON);
     });
 
