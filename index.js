@@ -33,7 +33,6 @@ app.post('/submit-data', function (req, res) {
     if (err) throw err;
       var result = JSON.stringify(json); // I tried to stringfy this, but doesn't work neither
       //console.log(result); // This console inside of the function works!
-      resolve(result);
       //var custID = result.custID;
       //req.setAttribute("SES_ID",custID);
       //var c = JSON.parse(this.res)
