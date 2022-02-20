@@ -34,7 +34,7 @@ app.post('/submit-data', function (req, res) {
       res.sendFile('sucessfullylogin.html', { root:__dirname });
       //window.location = "https://takacastoff-3.herokuapp.com/";
       //window.location.href = "https://takacastoff-3.herokuapp.com/";
-      res.redirect('https://takacastoff-3.herokuapp.com/');
+      res.redirect('https://takacastoff-3.herokuapp.com/Homepage.jsp');
     });
 
 });
