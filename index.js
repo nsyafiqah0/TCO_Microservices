@@ -75,4 +75,16 @@ app.post('/view', function (req, res) {
 //var server = app.listen(8085, function () {
    // console.log('Node server is running..');
 //});
-let port = process.env.PORT || 8080; along with app.listen(port);
+
+//port (as described above) and host are both wrong
+const host = 'localhost';
+const port = 3000;
+
+//use alternate localhost and the port Heroku assigns to $PORT
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
+//Then you can start the server, as usual:
+
+app.listen(port, host, function() {
+  console.log("Server started.......");
+});
