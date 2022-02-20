@@ -17,7 +17,7 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function (req, res) {
-    res.sendFile('index.html', { root:__dirname });
+    res.sendFile('signUp.html', { root:__dirname });
 });
 
 //for read css
@@ -61,7 +61,8 @@ app.post('/signup', function (req, res) {
         var sql = "INSERT into customer(custPwd, custPhoneNum, custEmail, custUsername) values('"+pass+"','"+phonenumber+"','"+email+"','"+username+"')";
         con.query(sql, function (err, result) {
           if (err) throw err;
-          res.sendFile('index.html', { root:__dirname });
+          //res.sendFile('index.html', { root:__dirname });
+           res.redirect('https://takacastoff-3.herokuapp.com/);
         });
       });
 });
