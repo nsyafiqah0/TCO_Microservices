@@ -34,9 +34,9 @@ app.post('/submit-data', function (req, res) {
       //var custid = result;
       //var custID = result.custID;
       //req.setAttribute("SES_ID",custID);
-      //var custid = JSON.stringify(result);   
-      var custid = JSON.parse(result);
-      res.redirect('https://takacastoff-3.herokuapp.com/Homepage.jsp?custID='+custid);
+      var custid = JSON.stringify(result); 
+      var s = custid[0].custID + "";
+      res.redirect('https://takacastoff-3.herokuapp.com/Homepage.jsp?custID='+s);
     });
 
 });
