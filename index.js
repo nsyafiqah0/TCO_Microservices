@@ -37,7 +37,7 @@ app.post('/submit-data', function (req, res) {
       //var c = JSON.parse(this.res)
             
                  
-      res.redirect('https://takacastoff-3.herokuapp.com/Homepage.jsp?custID='+custId);
+      res.redirect('https://takacastoff-3.herokuapp.com/Homepage.jsp?custID='+custid);
     });
 
 });
