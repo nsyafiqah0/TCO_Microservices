@@ -31,13 +31,11 @@ app.post('/submit-data', function (req, res) {
     var sql = 'SELECT custID FROM customer WHERE custUsername = ? OR custPwd = ?';
     con.query(sql, [username, pass], function (err, result) {
     if (err) throw err;
-      var custid = result;
+      //var custid = result;
       //var custID = result.custID;
       //req.setAttribute("SES_ID",custID);
-      //var c = JSON.parse(this.res)
-            
-                 
-      res.redirect('https://takacastoff-3.herokuapp.com/Homepage.jsp?custID='+custid);
+      const myJSON = JSON.stringify(result);                 
+      res.redirect('https://takacastoff-3.herokuapp.com/Homepage.jsp?custID='+myJSON);
     });
 
 });
