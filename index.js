@@ -31,12 +31,10 @@ app.post('/submit-data', function (req, res) {
     var sql = 'SELECT custID FROM customer WHERE custUsername = ? OR custPwd = ?';
     con.query(sql, [username, pass], function (err, result) {
     if (err) throw err;
-      //var custid = result;
-      //var custID = result.custID;
-      //req.setAttribute("SES_ID",custID);
-      var custid = JSON.stringify(result);
+     const id = JSON.stringify(result);
+      //var custid = JSON.stringify(result);
       //const myObj = JSON.parse(custid);
-      var id = custid["custID"];
+      //var id = custid["custID"];
       //var data = custid;
       //var s = data[0].custID + "";
       //var d = parseInt(s);
