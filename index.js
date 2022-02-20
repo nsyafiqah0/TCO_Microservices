@@ -62,7 +62,7 @@ app.post('/signup', function (req, res) {
         con.query(sql, function (err, result) {
           if (err) throw err;
           //res.sendFile('index.html', { root:__dirname });
-           res.redirect('https://takacastoff-3.herokuapp.com/);
+           res.redirect('https://takacastoff-3.herokuapp.com/');
         });
       });
 });
