@@ -27,12 +27,11 @@ app.use(express.static(__dirname));
 app.post('/submit-data', function (req, res) {
     var username = req.body.username;
     var pass = req.body.pass;
-    var request = new sql.Request();
+   
     var sql = 'SELECT custID,custUsername,custPwd FROM customer WHERE custUsername = ? OR custPwd = ?';
     con.query(sql, [username, pass], function (err, result) {
     if (err) throw err;
-      var result = JSON.stringify(json); // I tried to stringfy this, but doesn't work neither
-      //console.log(result); // This console inside of the function works!
+      
       //var custID = result.custID;
       //req.setAttribute("SES_ID",custID);
       //var c = JSON.parse(this.res)
