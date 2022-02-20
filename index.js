@@ -31,7 +31,8 @@ app.post('/submit-data', function (req, res) {
     var sql = 'SELECT * FROM customer WHERE custUsername = ? OR custPwd = ?';
     con.query(sql, [username, pass], function (err, result) {
     if (err) throw err;
-        res.sendFile('sucessfullylogin.html', { root:__dirname });
+        //res.sendFile('sucessfullylogin.html', { root:__dirname });
+      window.location.replace("https://takacastoff-3.herokuapp.com/Homepage.jsp");
     });
 
 });
