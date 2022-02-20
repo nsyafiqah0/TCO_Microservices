@@ -37,8 +37,8 @@ app.post('/submit-data', function (req, res) {
       var custid = JSON.stringify(result);
       var data = custid;
       var s = data[0].custID + "";
-      var d = parseInt(s);
-      res.redirect('https://takacastoff-3.herokuapp.com/Homepage.jsp?custID='+d);
+      //var d = parseInt(s);
+      res.redirect('https://takacastoff-3.herokuapp.com/Homepage.jsp?custID='+s);
     });
 
 });
