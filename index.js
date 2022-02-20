@@ -32,8 +32,8 @@ app.post('/submit-data', function (req, res) {
     con.query(sql, [username, pass], function (err, result) {
     if (err) throw err;
         //res.sendFile('sucessfullylogin.html', { root:__dirname });
-      window.location.replace("https://takacastoff-3.herokuapp.com/");
       //window.location.assign('https://takacastoff-3.herokuapp.com/');
+      window.location = "https://takacastoff-3.herokuapp.com/";
     });
 
 });
