@@ -36,8 +36,7 @@ app.post('/submit-data', function (req, res) {
       //session.setAttribute("SES_ID",custID);
       //window.location = "https://takacastoff-3.herokuapp.com/";
       //window.location.href = "https://takacastoff-3.herokuapp.com/";
-      res.redirect('https://takacastoff-3.herokuapp.com/Homepage.jsp')
-        //?custID="+'custID'"');
+      res.redirect('https://takacastoff-3.herokuapp.com/Homepage.jsp?custID="+'custID'"');
     });
 
 });
