@@ -28,7 +28,7 @@ app.post('/submit-data', function (req, res) {
     var username = req.body.username;
     var pass = req.body.pass;
    
-    var sql = 'SELECT custID,custUsername,custPwd FROM customer WHERE custUsername = ? OR custPwd = ?';
+    var sql = 'SELECT custID FROM customer WHERE custUsername = ? OR custPwd = ?';
     con.query(sql, [username, pass], function (err, result) {
     if (err) throw err;
       var custid = result;
