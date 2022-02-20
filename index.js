@@ -32,7 +32,8 @@ app.post('/submit-data', function (req, res) {
     con.query(sql, [username, pass], function (err, result) {
     if (err) throw err;
         //res.sendFile('sucessfullylogin.html', { root:__dirname });
-      window.location.replace("https://takacastoff-3.herokuapp.com/Homepage.jsp");
+      window.location.replace("https://takacastoff-3.herokuapp.com/");
+      //window.location.assign('https://takacastoff-3.herokuapp.com/');
     });
 
 });
@@ -41,14 +42,14 @@ app.post('/submit-data', function (req, res) {
 //for signup
 app.post('/signup', function (req, res) {
     var username = req.body.username;
-    var phoneNumber= req.body.phoneNumber;
+    var phonenumber= req.body.phonenumber;
     var email = req.body.email;
     var pass = req.body.pass;
 
     con.connect(function(err) {
         if (err) throw err;
         console.log("Connected!");
-        var sql = "INSERT into customer(custPwd, custPhoneNum, custEmail, custUsername) values('"+pass+"','"+phoneNumber+"','"+email+"','"+username+"')";
+        var sql = "INSERT into customer(custPwd, custPhoneNum, custEmail, custUsername) values('"+pass+"','"+phonenumber+"','"+email+"','"+username+"')";
         con.query(sql, function (err, result) {
           if (err) throw err;
           res.sendFile('index.html', { root:__dirname });
